@@ -1,2 +1,2 @@
-# jsh
-Pd2's JavaShell, a better choice than installing Shell tools.
+# JavaShell - Pd2's Shell
+A better choice than installing Shell tools.
