@@ -1,0 +1,33 @@
+<component name="libraryTable">
+  <library name="com.github.jnr:jnr-posix:3.0.52" type="repository">
+    <properties maven-id="com.github.jnr:jnr-posix:3.0.52" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/jnr/jnr-posix/3.0.52/jnr-posix-3.0.52.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/jnr/jnr-ffi/2.1.11/jnr-ffi-2.1.11.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/jnr/jffi/1.2.22/jffi-1.2.22.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/jnr/jffi/1.2.22/jffi-1.2.22-native.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/7.1/asm-7.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.1/asm-commons-7.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-analysis/7.1/asm-analysis-7.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-tree/7.1/asm-tree-7.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.1/asm-util-7.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/jnr/jnr-a64asm/1.0.0/jnr-a64asm-1.0.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/jnr/jnr-constants/0.9.14/jnr-constants-0.9.14.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/jnr/jnr-posix/3.0.52/jnr-posix-3.0.52-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/jnr/jnr-ffi/2.1.11/jnr-ffi-2.1.11-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/jnr/jffi/1.2.22/jffi-1.2.22-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/7.1/asm-7.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.1/asm-commons-7.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-analysis/7.1/asm-analysis-7.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-tree/7.1/asm-tree-7.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.1/asm-util-7.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/jnr/jnr-a64asm/1.0.0/jnr-a64asm-1.0.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/jnr/jnr-x86asm/1.0.2/jnr-x86asm-1.0.2-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/jnr/jnr-constants/0.9.14/jnr-constants-0.9.14-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

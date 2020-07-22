@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="JavaShell:jar">
+    <output-path>$PROJECT_DIR$/out/JAR/</output-path>
+    <root id="root">
+      <element id="archive" name="JavaShell.jar">
+        <element id="module-output" name="JavaShell" />
+      </element>
+    </root>
+  </artifact>
+</component>
