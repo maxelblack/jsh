@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="JavaShell:debug">
+    <output-path>$PROJECT_DIR$/../../Debug/JavaShell</output-path>
+    <root id="root">
+      <element id="archive" name="main.jar">
+        <element id="module-output" name="JavaShell" />
+      </element>
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="com.github.jnr:jnr-posix:3.0.52" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/run.bat" />
+      <element id="file-copy" path="$PROJECT_DIR$/run.sh" />
+    </root>
+  </artifact>
+</component>

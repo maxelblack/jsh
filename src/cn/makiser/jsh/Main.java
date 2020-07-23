@@ -8,11 +8,15 @@ import cn.makiser.jsh.plugin.Plugin;
 import cn.makiser.jsh.plugin.PluginLoader;
 import cn.makiser.jsh.plugin.SystemBasicPlugin;
 import cn.makiser.jsh.shell.JavaShell;
+import cn.makiser.jsh.shell.Tools;
 import jnr.posix.POSIX;
 import jnr.posix.POSIXFactory;
 import jnr.posix.util.DefaultPOSIXHandler;
 
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,7 +64,7 @@ public class Main {
             JavaShell shell = new JavaShell();
             shell.run();
         } catch (Exception e) {
-            e.printStackTrace();
+            Tools.throwexp(e);
             System.out.println('\n');
         }
     }

@@ -1,33 +1,32 @@
 package cn.makiser.jsh.shell;
 
-import cn.makiser.jsh.io.Printer;
 import cn.makiser.jsh.plugin.Plugin;
 
 public class Command {
     private final String name;
-    private ShellRunnable exec;
+    private ShellRunnable runnable;
     private Plugin plugin;
 
     public Command(String name) {
         this.name = name;
     }
-    public Command(String name, ShellRunnable exec) {
+    public Command(String name, ShellRunnable runnable) {
         this.name = name;
-        this.exec = exec;
+        this.runnable = runnable;
     }
 
     //get&set
     public String getName() {
         return name;
     }
-    public ShellRunnable getExec() {
-        return exec;
+    public ShellRunnable getRunnable() {
+        return runnable;
     }
     public Plugin getPlugin() {
         return plugin;
     }
-    public void setExec(ShellRunnable exec) {
-        this.exec = exec;
+    public void setRunnable(ShellRunnable runnable) {
+        this.runnable = runnable;
     }
 
     protected void setPlugin(Plugin plugin) {

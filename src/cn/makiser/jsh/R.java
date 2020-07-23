@@ -15,6 +15,7 @@ public class R {
                 "输出各插件注册指令, 查看在何处发生冲突.");
         strings.put("shell.cmd_not_found", "未找到该指令, 请检查输入是否有误(区分大小写).");
         strings.put("shell.plugin_load", "已载入 $num 个插件");
+        strings.put("shell.java_exception", "Java内部的程序异常:");
         strings.put("cd.not_found", "目录不存在");
         s_strings.put("at", "在");
         s_strings.put("and", "和");

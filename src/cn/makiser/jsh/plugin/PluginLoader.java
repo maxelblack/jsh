@@ -16,7 +16,7 @@ public class PluginLoader {
     public Plugin load() throws MalformedURLException, ClassNotFoundException,
             IllegalAccessException, InstantiationException {
         URLClassLoader loader = new URLClassLoader(
-                new URL[]{new URL(jar.getPath())},
+                new URL[]{new URL("file:" + jar.getPath())},
                 Thread.currentThread().getContextClassLoader());
         Class<?> manifestClass = loader.loadClass("Manifest");
         Manifest manifest = (Manifest) manifestClass.newInstance();

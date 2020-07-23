@@ -3,7 +3,6 @@ package cn.makiser.jsh.shell;
 import cn.makiser.jsh.Main;
 import cn.makiser.jsh.R;
 import cn.makiser.jsh.plugin.Plugin;
-import com.sun.istack.internal.NotNull;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 public class JavaShell {
-    public String print_format = "$login@$host: $pwd$ ";
+    public String print_format = "$login@$host: $folder$_ ";
 
     private final Map<String, Command> commandMap = new HashMap<>();
     private String login, host;
@@ -23,6 +22,9 @@ public class JavaShell {
         loadCommands(Main.plugins);
         pwd = new File(Main.posix.getcwd());
         login = Main.posix.getlogin();
+        if(login == null) {
+            login = "null";
+        }
         host = Main.posix.gethostname();
         while(true) {
             Main.lc_printer.print(getPrint());
@@ -31,21 +33,25 @@ public class JavaShell {
         }
     }
 
-    public void exec(@NotNull String commandLine, boolean doEcho) {
-        Command command = commandMap.get(commandLine.split(" ")[0]);
+    public void exec(String commandLine, boolean doEcho) throws Exception {
+        String c = commandLine.split(" ")[0];
+        Command command = commandMap.get(c);
         if(command == null) {
-            Main.lc_printer.println(R.strings.get("shell.cmd_not_found"));
+            if(doEcho && !c.isEmpty()) Main.lc_printer.println("shell: " +
+                    R.strings.get("shell.cmd_not_found"));
         } else {
+            Parameter parameter = new Parameter(commandLine);
             printer = new ActivePrinter(Main.lc_printer, command);
-            command.getExec().run(this, commandLine, doEcho);
+            command.getRunnable().run(this, parameter, doEcho);
         }
     }
     public static final int PWD_NOT_FOUND = 1;
-    public int chdir(File pwd) {
+    public int chdir(String pwd) throws IOException {
         int rc = 0;
-        if(pwd.exists()) {
-            this.pwd = pwd;
-            Main.posix.chdir(pwd.getPath());
+        if(new File(pwd).exists()) {
+            Main.posix.chdir(pwd);
+            System.setProperty("user.dir", pwd);
+            this.pwd = new File(Main.posix.getcwd());
         } else {
             rc = PWD_NOT_FOUND;
         }
@@ -75,10 +81,15 @@ public class JavaShell {
     //功能get
     public String getPrint() throws IOException {
         String s = print_format;
-        s = s.replace("$folder", pwd.getName());
+        s = s.replace("$folder", new File(pwd.getCanonicalPath()).getName());
         s = s.replace("$pwd", pwd.getCanonicalPath());
         s = s.replace("$login", login);
         s = s.replace("$host", host);
+        if(login.equals("root")) {
+            s = s.replace("$_", "#");
+        } else {
+            s = s.replace("$_", "$");
+        }
         return s;
     }
 
