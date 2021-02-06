@@ -2,7 +2,7 @@
 
 ***A better choice than installing Shell tools.**
 
-**Unfortunately, this project has stopped updating. [A new project](https://github.com/maxelblack/psh) has been set up to replace it.**
+**Unfortunately, this project has stopped updating. [A new project](https://github.com/pd2-works/psh) has been set up to replace it.**
 
 JavaShell can provide more advanced functions than ordinary shells.
 
